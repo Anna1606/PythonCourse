@@ -29,3 +29,15 @@ print(a)
 print(b)
 
 # вариант 3
+import random
+
+N = 10
+
+lst = [random.randrange(10) for _ in range(N)]
+print(f'{lst = }')
+
+k = int(input('k = '))
+for _ in range(k):
+    lst.insert(0, lst.pop())
+
+print(f'{lst = }') #когда нужно вывести значение переменной с ее именем (функционал самодокументации)
