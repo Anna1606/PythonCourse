@@ -11,6 +11,8 @@ s = int(input('введите сумму двух чисел: '))
 p = int(input('введите произведение двух чисел: '))
 
 for x in range(1, 1000):
-    if s - x == p / x and p % x == 0:
+    if s - x == p // x and p % x == 0:
         print(x, p // x)
-    
+        break
+else:
+    print('решения нет')    

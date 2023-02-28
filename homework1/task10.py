@@ -7,16 +7,20 @@
 # 5 -> 1 0 1 1 0
 # 2
 
+import random
+
 n = int(input('введите количество монет на столе: '))
 
-import random
 a = [random.randint(0, 1) for i in range(n)]
 print(a)
 sum_1 = 0
 sum_0 = 0
-min_count = 0
 for i in range(n):
-    if a[i] == 0: sum_0 += 1
-    if a[i] == 1: sum_1 += 1
-if sum_0 < sum_1: print(sum_0)
-else: print(sum_1)
+    if a[i] == 0: 
+        sum_0 += 1
+    else: 
+        sum_1 += 1
+if sum_0 < sum_1: 
+    print(sum_0)
+else: 
+    print(sum_1)

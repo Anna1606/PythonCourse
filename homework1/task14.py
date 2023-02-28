@@ -6,6 +6,6 @@
 n = int(input('введите целое число: '))
 
 k = 0
-while 2 ** k < n:
-    print(2 ** k)
+while (var := 2 ** k) <= n:
+    print(var)
     k += 1
