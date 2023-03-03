@@ -17,13 +17,26 @@ A = [random.randrange(10) for _ in range(N)]
 print(f'{A = }')
 x = int(input("введите число: "))
 
+# вариант 1
 nearest_to_x = A[0]
 dif_min = abs(x - A[0])
 
-for i in range(1, len(A)):
-    dif = abs(x - A[i])
+for i in A:
+    dif = abs(x - i)
     if dif < dif_min:
         dif_min = dif
-        nearest_to_x = A[i]
+        nearest_to_x = i
+        if dif == 0:
+            print(i)
+            break
     
 print(f'ближайшее к {x} число {nearest_to_x}')
+
+# вариант 2 (с использованием словарей)
+dct = {abs(x - item): item for item in A} # ключ словаря выражен как минимальная разница, которую мы ищем
+print(dct)
+print(dct[min(dct)]) # функция min ищет минимальный ключ в нашем словаре
+
+# вариант 3 
+
+print(min(A, key=lambda i: abs(i - x))) #key - это функция-ключ (атрибут), по которому будет проходить сортировка
