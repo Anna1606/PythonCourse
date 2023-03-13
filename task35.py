@@ -6,7 +6,7 @@
 # Output: yes
 
 def simple_number(n):
-    for i in range(2, n ** 0,5 + 1): # n ** 0,5 означает извлечь корень из n
+    for i in range(2, n ** 0.5 + 1): # n ** 0,5 означает извлечь корень из n
         if n % i == 0:
             return print(f'число {n} не простое')
     return print(f'число {n} простое')
