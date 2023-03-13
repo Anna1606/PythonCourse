@@ -14,31 +14,18 @@
 # пару не дает).
 
 k = int(input("Введите число: "))
-dct = {}
-back_dct = {}
 if k < 10 ** 5:
     while k > 0:
-        array_i = []
         m = 0
         n = 0
-        for i in range(1, k):
+        for i in range(1, k // 2 + 1):
             if k % i == 0:
                 m += i
-        dct[k] = m
-        for j in range(1, m):
+        for j in range(1, m // 2 + 1):
             if m % j == 0:
                 n += j
-            back_dct[m] = n
+        if k == n and n != m and k < m:
+            print(k, m)
         k -= 1
 else:
     print("Число слишком большое, попробуйте ещё раз")
-
-friends = set()
-for (q,v) in dct.items():
-    for (m,n) in back_dct.items():
-        if q == n and v == m and q != v:
-            friends.add(q)
-            friends.add(v)
-print(*friends)
-
-
