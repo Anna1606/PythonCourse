@@ -6,13 +6,11 @@
 # Ввод: [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 # Вывод: [1, 9, 13, 14, 19]
 import random
-lst = [random.randint(0, 20) for i in range(20)]
-# lst = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+lst = [random.randint(0, 20) for i in range(10)]
 max_ = int(input('введите мактимальное значение: '))
 min_ = int(input('введите минимальное значение: '))
-lst_ = []
-for i in range(len(lst)):
-    if min_ <= lst[i] <= max_:
-        lst_.append(i)
-print(lst)
-print(lst_)
+print(*lst)
+for i in lst:
+    if min_ <= i <= max_:
+        print(i, end= ' ')
+

@@ -10,5 +10,4 @@ a_1 = int(input('введите первый элемент: '))
 dif = int(input('введите разность: '))
 n = int(input('введите количество элементов прогрессии: '))
 for i in range(n):
-    a_n = a_1 + dif * i
-    print(a_n, end=" ")
+    print(a_n := a_1 + dif * i, end=" ")
