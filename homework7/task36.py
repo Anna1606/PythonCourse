@@ -25,3 +25,9 @@ def print_operation_table(operation, num_rows=6, num_columns=6):
 
 print_operation_table(lambda x, y: x * y)
 
+# вариант 2:
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for row in range(1, num_rows + 1):
+        print(*map(operation, [row] * num_columns, range(1, num_columns + 1)), sep='\t')
+
+print_operation_table(lambda x, y: x * y)

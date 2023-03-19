@@ -15,10 +15,9 @@
 
 poem = input('Пиши стишок: ')
 # poem = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
-poem = poem.lower()
-poem = poem.split()
+poem = poem.lower().split()
 
-vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я']
+vowels = 'аеёиоуыэюя'
 l = set()
 for i in poem:
     l.add(len(list(filter(lambda x: x in vowels, i))))
